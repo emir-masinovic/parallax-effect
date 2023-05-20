@@ -1,0 +1,47 @@
+body::before {
+    position: absolute;
+    top: 70px;
+    right: 40%;
+    content: "XS";
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#box {
+    position: absolute;
+    background-color: black;
+    border: 1px solid blue;
+    min-height: 50px;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+    body::before {
+        content: "SM 576px";
+    }
+}
+
+@media (min-width: 768px) {
+    body::before {
+        content: "MD 768px";
+    }
+}
+
+@media (min-width: 992px) {
+    body::before {
+        content: "LG 992px";
+    }
+}
+
+@media (min-width: 1200px) {
+    body::before {
+        content: "XL 1200px";
+    }
+}
+
+@media (min-width: 1400px) {
+    body::before {
+        content: "XXL 1400px";
+    }
+}
