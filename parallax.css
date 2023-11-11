@@ -5,42 +5,47 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 62.5%;
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: white;
+    font-size: 1.6rem;
 }
 
 header {
     position: absolute;
     z-index: 9999;
     width: 100%;
-    padding: .5rem 1rem;
+    padding: 10px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav {
     display: flex;
     margin: 0 auto;
-    max-width: 1400px;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    opacity: 0.9;
-    height: 2.3rem;
+    opacity: 0.8;
+    width: 20px;
+    height: 20px;
 }
 
 nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
+    gap: 10px;
     list-style: none;
 }
 
 nav ul li a {
-    padding: .5rem;
+    padding: 5px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -53,14 +58,14 @@ nav ul li a:hover {
 }
 
 .search {
-    padding: .5rem;
-    font-size: 1.05rem;
+    padding: 5px;
+    font-size: 1.1rem;
 }
 
 .hamburger a {
     display: flex;
-    width: 3rem;
-    height: 3rem;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, .3);
@@ -71,9 +76,9 @@ nav ul li a:hover {
 .hamburger .bar {
     position: relative;
     width: 80%;
-    height: .1rem;
+    height: 1px;
     background-color: #fff;
-    border-radius: 2rem;
+    border-radius: 30%;
 }
 
 .hamburger .bar::before,
@@ -88,11 +93,11 @@ nav ul li a:hover {
 }
 
 .hamburger .bar::before {
-    top: -.5rem;
+    top: -5px;
 }
 
 .hamburger .bar::after {
-    top: .5rem;
+    top: 5px;
 }
 
 main {
@@ -125,17 +130,17 @@ main {
 
 .bg-img {
     position: absolute;
-    width: 220%;
+    width: 250%;
     height: 120%;
     top: 50%;
-    left: 50%;
+    left: 45%;
 }
 
 .rock-1 {
     position: absolute;
     z-index: 10;
-    top: 85%;
-    left: -10%;
+    top: 80%;
+    left: -50%;
     width: fit-content;
     height: fit-content;
     scale: .5;
@@ -146,10 +151,10 @@ main {
     position: absolute;
     z-index: 10;
     top: 80%;
-    left: 50%;
+    left: 20%;
     width: fit-content;
     height: fit-content;
-    scale: .5;
+    scale: .4;
     filter: saturate(0.8) hue-rotate(250deg);
 }
 
@@ -157,7 +162,7 @@ main {
     position: absolute;
     z-index: 5;
     top: 20%;
-    left: -80%;
+    left: -170%;
     width: fit-content;
     height: fit-content;
     scale: .2;
@@ -168,7 +173,7 @@ main {
     position: absolute;
     z-index: 5;
     top: 50%;
-    left: 30%;
+    left: 15%;
     width: fit-content;
     height: fit-content;
     scale: .2;
@@ -188,87 +193,81 @@ main {
 
 .text h2 {
     font-weight: 200;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .text h1 {
     font-weight: 600;
-    font-size: 3.6rem;
-    line-height: 0.9;
+    font-size: 4rem;
+    /*line-height: 1.3;*/
 }
 
 ::selection {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
+
+@media (min-width: 375px) {
+
+    .rock-1 {
+        left: -30%;
+    }
+
+    .rock-4 {
+        left: -130%;
+    }
+
+    .rock-2{
+        left: 30%;
+    }
+
+    .tree-1{
+        left: 25%;
+    }
+
+}
+
+@media (min-width: 425px) {
+
+    header{
+        padding: 20px;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav ul{
+        gap: 20px;
+    }
+
+    .search {
+        scale: 1.3;
+    }
+
+    .rock-4 {
+        left: -100%;
+    }
+}
+
+
 @media (min-width: 576px) {
 
     .rock-1 {
-        left: 9%;
-        scale: .7;
-    }
-
-    .rock-2 {
-        left: 70%;
+        left: -10%;
     }
 
     .rock-4 {
-        left: -60%;
-        top: 15%;
+        left: -75%;
     }
 
-    .tree-1 {
+    .rock-2 {
         left: 50%;
     }
 
-    .text h1 {
-        font-size: 5rem;
-    }
-
-    .text h2 {
-        font-size: 2.3rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .bg-img {
-        width: 120%;
-    }
-
-    .rock-4 {
-        left: 10%;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .rock-1 {
-        scale: 1;
-        left: 20%;
-    }
-
-    .rock-2 {
-        scale: 0.7;
-        left: 80%;
-    }
-
-    .rock-4 {
-        left: -15%;
-    }
-
     .tree-1 {
-        scale: 0.25;
-        left: 55%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .rock-4 {
-        left: 1%;
-    }
-
-    .tree-1 {
-        left: 60%;
+        left: 45%;
     }
 
     .text h1 {
@@ -276,38 +275,87 @@ main {
     }
 
     .text h2 {
-        font-size: 3.5rem;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .bg-img {
+        width: 150%;
+    }
+
+    .rock-2 {
+        left: 60%;
+    }
+
+    .rock-4 {
+        left: -60%;
+    }
+
+    .tree-1 {
+        left: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .rock-1 {
+        left: 5%;
+        scale: .7;
+        top: 80%;
+    }
+
+    .rock-4 {
+        left: -30%;
+    }
+
+    .rock-2 {
+        scale: 0.5;
+        left: 75%;
+    }
+
+    .tree-1 {
+        left: 65%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .rock-4 {
+        left: -25%;
+        top: 15%;
+    }
+
+    .rock-2 {
+        left: 80%;
+        scale: .6;
+    }
+
+    .tree-1 {
+        /*top: 40%;*/
+        left: 65%;
+    }
+
+    .text h1 {
+        font-size: 8rem;
+    }
+
+    .text h2 {
+        font-size: 3rem;
     }
 }
 
 @media (min-width: 1400px) {
 
     .rock-1 {
-        left: 15%;
+        left: 5%;
     }
 
     .rock-4 {
-        left: 1%;
+        left: -15%;
     }
 
     .tree-1 {
-        left: 65%;
+        left: 68%;
     }
-
-    .text h1 {
-        font-size: 7rem;
-    }
-
-    .text h2 {
-        font-size: 4rem;
-    }
-
-    .logo {
-        height: 2.8rem;
-    }
-
-    nav ul li a {
-        font-size: 1.2rem;
-    }
-
 }
